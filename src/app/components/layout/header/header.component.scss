@@ -1,0 +1,39 @@
+nav{
+    background-color: #773344;
+}
+
+a{
+    color: #F5E9E2;
+}
+
+.containerIcons{
+    display: flex;
+
+}
+
+.usuario{
+    margin: 10px;
+}
+
+.logout{
+    margin: 10px;
+}
+
+.logo{
+    margin: 10px;
+}
+
+.centralizarTexto{
+display: flex;
+align-items: center;
+}
+
+.nav-link {
+    color: #F5E9E2; /* Cor padrão */
+    text-decoration: none;
+}
+
+/* Mudança de cor ao passar o mouse */
+.nav-link:hover {
+    color: #ba9487; /* Altere para a cor desejada */
+}

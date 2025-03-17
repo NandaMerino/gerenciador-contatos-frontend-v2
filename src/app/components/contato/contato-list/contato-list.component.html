@@ -1,0 +1,68 @@
+<div class="container">
+
+  <div class="d-flex justify-content-between mb-3">
+    <h2>Lista de Contatos</h2>
+    <button class="addButton" (click)="novo()">
+      <span class="material-symbols-outlined">add</span>
+      Adicionar
+    </button>
+  </div>
+
+  <div class="input-group">
+    <div class="form-outline" data-mdb-input-init>
+      <input type="search" id="form1" class="form-control" placeholder="Pesquisar contato..." [(ngModel)]="busca" (ngModelChange)="findByTrechoNome()"/>
+    </div>
+    <button type="button" class="btn searchButton" data-mdb-ripple-init>
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (contato of lista; track $index){
+      <tr>
+        <td>{{ contato.nome }}</td>
+        <td>{{ contato.telefone }}</td>
+        <td>{{ contato.email }}</td>
+        <td class="alinharDireita">
+          @if(!modoAssociacao){
+          <button type="button" class="btn btn-outline-primary iconButton" data-mdb-ripple-init
+            data-mdb-ripple-color="dark" (click)="editar(contato)">
+            <span class="material-symbols-outlined editIcon">
+              edit
+            </span>
+          </button>
+          <button type="button" class="btn btn-outline-danger iconButton" data-mdb-ripple-init
+            data-mdb-ripple-color="dark" (click)="deleteById(contato)">
+            <span class="material-symbols-outlined deleteIcon">
+              delete
+            </span>
+          </button>
+          }@else{
+          <a class="btn-rounded btn btn-success" (click)="selecionar(contato)">Selecionar</a>
+          }
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<ng-template #modalContatosForm>
+  <div class="modal-header">
+    <h5 class="modal-title">Contato</h5>
+    <button type="button" class="btn-close" (click)="modalRef.close()"></button>
+  </div>
+  <div class="modal-body">
+    <app-contato-form [contato]="contatoEdit" (retorno)="retornoForm($event)"></app-contato-form>
+  </div>
+</ng-template>

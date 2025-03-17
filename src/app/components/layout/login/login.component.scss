@@ -1,0 +1,114 @@
+.body {
+  background: linear-gradient(45deg, #A75D5D 30%, #D3756B, #F0997D, #FFC3A1);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+p{
+  color: #A75D5D;
+  font-weight: 70px;
+  font-size: 25px;
+}
+
+label{
+  font-size: 13px;
+}
+
+.conteinerLogin{
+  background-color: rgb(237, 235, 235);
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.enterButton{
+  background-color: #D2E1C8; /* Cor de fundo do botão */
+    color: #c97f7f; /* Cor do texto */
+    border: none; /* Remover borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 5px 10px; /* Espaçamento interno do botão */
+    font-size: 13px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de mãozinha */
+    width: 100px; /* Define um tamanho fixo menor */
+    height: 30px; /* Altura menor */
+    margin: 10px;
+}
+
+.enterButton:hover {
+  background-color: #c3d4b6; /* Cor de fundo ao passar o mouse */
+  color: #a65d5d; /* Cor do texto ao passar o mouse */
+}
+
+.registerButton {
+  background-color: #D2E1C8; /* Cor de fundo do botão */
+  color: #c97f7f; /* Cor do texto */
+  border: none; /* Remover borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 5px 10px; /* Espaçamento interno do botão */
+  font-size: 13px; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor em forma de mãozinha */
+  width: 100px; /* Define um tamanho fixo menor */
+  height: 30px; /* Altura menor */
+  margin: 10px;
+}
+
+.registerButton:hover {
+  background-color: #c3d4b6; /* Cor de fundo ao passar o mouse */
+  color: #a65d5d; /* Cor do texto ao passar o mouse */
+}
+
+.conteinerButtons{
+  display: flex;
+}
+
+.conteinerInputs {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Reduzi um pouco o espaçamento */
+}
+
+.form-outline {
+  width: 75%; /* Deixa os inputs um pouco menores */
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 13px; /* Fonte um pouco menor */
+  color: #5e3636; /* Cor combinando com o tema */
+  margin-bottom: 4px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 6px 10px; /* Menos padding para inputs mais finos */
+  border: 1.5px solid #c97f7f; /* Borda mais sutil */
+  border-radius: 8px; /* Cantos suavemente arredondados */
+  font-size: 13px; /* Fonte menor */
+  outline: none;
+  transition: 0.2s ease-in-out;
+  background-color: white;
+  height: 30px; /* Reduzindo a altura */
+}
+
+.form-control:focus {
+  border-color: #D3756B;
+  box-shadow: 0 0 6px rgba(211, 117, 107, 0.4);
+}
+
+/* Efeito ao passar o mouse */
+.form-control:hover {
+  border-color: #F0997D;
+}
